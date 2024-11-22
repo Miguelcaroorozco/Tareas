@@ -1,0 +1,36 @@
+{
+    "users": [
+        {
+            "id": "2",
+            "name": "Miguel",
+            "username": "Miguel",
+            "password": "12",
+            "email": "tucasita@gmail.com",
+            "role": "Administrador"
+        },
+        {
+            "id": "3",
+            "name": "Alejandro",
+            "username": "Ale",
+            "password": "123",
+            "email": "Ale@gmail.com",
+            "role": "Administrador"
+        },
+        {
+            "id": "4",
+            "name": "Sebastian",
+            "username": "Xsass",
+            "password": "1234",
+            "email": "jugadordebrawlstars@gmail.com",
+            "role": "Vendedor"
+        },
+        {
+            "id": "5",
+            "name": "Diego",
+            "username": "Diego",
+            "password": "12",
+            "email": "diego@gmail.com",
+            "role": "Administrador"
+        }
+    ]
+}
