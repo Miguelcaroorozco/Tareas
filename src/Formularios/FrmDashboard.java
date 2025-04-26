@@ -4,18 +4,24 @@
  */
 package Formularios;
 
+
 /**
  *
- * @author Miguel
+ * @author Ing. Narvaez Mejia
  */
 public class FrmDashboard extends javax.swing.JFrame {
 
+    
+    
     /**
-     * Creates new form FrmDashboard2
+     * Creates new form FrmDashboard
      */
     public FrmDashboard() {
-        this.setLocationRelativeTo(null);
+        
         initComponents();
+        setExtendedState(FrmDashboard.MAXIMIZED_BOTH);
+        setResizable(false);
+        
     }
 
     /**
@@ -31,35 +37,53 @@ public class FrmDashboard extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        MenUsuario = new javax.swing.JMenu();
-        Aduser = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        menuClientes = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        menuUsuarios = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Dashboard");
-        setBackground(new java.awt.Color(241, 139, 255));
+        setTitle("DASHBOARD");
 
-        jLabel1.setText("Dashboard");
+        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jLabel1.setText("BIENVENIDOS AL SISTEMA");
 
-        jLabel2.setText("Bienvenido");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/79626_monitor_system_utilities_icon.png"))); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Miguel\\Desktop\\Miguel\\Uni\\Semestre 4\\programacion 3\\Loginapp java\\src\\Imagenes\\descarga.png")); // NOI18N
+        jLabel3.setText("DESARROLADOR: Miguel Caro");
 
-        MenUsuario.setText("Usuario");
-        MenUsuario.addActionListener(new java.awt.event.ActionListener() {
+        jMenu1.setText("CLIENTES");
+
+        menuClientes.setText("ADMINISTRACION DE CLIENTES");
+        menuClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenUsuarioActionPerformed(evt);
+                menuClientesActionPerformed(evt);
             }
         });
+        jMenu1.add(menuClientes);
 
-        Aduser.setText("Administracion de cliente");
-        Aduser.addActionListener(new java.awt.event.ActionListener() {
+        jMenuBar1.add(jMenu1);
+
+        jMenu3.setText("USUARIOS");
+
+        menuUsuarios.setText("ADMINISTRACION USUARIOS");
+        menuUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AduserActionPerformed(evt);
+                menuUsuariosActionPerformed(evt);
             }
         });
-        MenUsuario.add(Aduser);
+        jMenu3.add(menuUsuarios);
 
-        jMenuBar1.add(MenUsuario);
+        jMenuBar1.add(jMenu3);
+
+        jMenu2.setText("VENTAS");
+
+        jMenuItem2.setText("ADMINITRACION DE VENTAS");
+        jMenu2.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
 
@@ -68,44 +92,42 @@ public class FrmDashboard extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(124, 124, 124)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(113, 113, 113))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(167, 167, 167))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(165, 165, 165))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(281, 281, 281)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel3)))
+                .addContainerGap(331, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel1)
-                .addGap(30, 30, 30)
-                .addComponent(jLabel3)
                 .addGap(43, 43, 43)
                 .addComponent(jLabel2)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addGap(61, 61, 61)
+                .addComponent(jLabel3)
+                .addContainerGap(169, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MenUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenUsuarioActionPerformed
-       FrmUsuario Usuario = new FrmUsuario();
-       Usuario.setVisible(true);
-       this.dispose();
-    }//GEN-LAST:event_MenUsuarioActionPerformed
+    private void menuClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuClientesActionPerformed
+        FrmClientes2 FC = new FrmClientes2();
+        FC.setVisible(true);
+    }//GEN-LAST:event_menuClientesActionPerformed
 
-    private void AduserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AduserActionPerformed
-        FrmUsuario Usuario = new FrmUsuario();
-       Usuario.setVisible(true);
-       this.dispose();
-    }//GEN-LAST:event_AduserActionPerformed
+    private void menuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuUsuariosActionPerformed
+       FrmUsuarios FC = new FrmUsuarios();
+        FC.setVisible(true);
+    }//GEN-LAST:event_menuUsuariosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,17 +160,24 @@ public class FrmDashboard extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 new FrmDashboard().setVisible(true);
+                
+      
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem Aduser;
-    private javax.swing.JMenu MenUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem menuClientes;
+    private javax.swing.JMenuItem menuUsuarios;
     // End of variables declaration//GEN-END:variables
 }
